@@ -2,13 +2,52 @@
 <html>
   <head>
     <title>Joel Colaso</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="assets/css/main_style.css">
   </head>
   <body>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        speed: 600
+      });
+    </script>
+
     <header>
       <h1>Welcome to my website</h1>
       <p>I created this website to show some of the projects I've worked on.</p>
     </header>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Project 1</div>
+        <div class="swiper-slide">Project 2</div>
+        <div class="swiper-slide">Project 3</div>
+        <!-- Add more -->
+      </div>
+    
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    
+
+
+    <section class = "projects_container">
+      <div class = "project">
+        <h3>Project 1 Title</h3>
+        <p>Project 1 text</p>
+      </div>
+
+    </section>
     
     <p>This website is still <strong>under construction</strong>. Thank you for visiting!</p>
     
