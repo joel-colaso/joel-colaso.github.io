@@ -1,0 +1,410 @@
+/* CSS HEX */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  
+  --licorice: #0e0004ff;
+  --dark-purple: #31081fff;
+  --rosewood: #6b0f1aff;
+  --red-violet: #b91372ff;
+  --magenta: #fa198bff;
+
+  --platinum: #d3d4d9ff;
+  --air-force-blue: #4b88a2ff;
+  --fire-brick: #bb0a21ff;
+  --eerie-black: #252627ff;
+  --purpureus: #a14da0ff;
+
+  --sidebar-bg-color: var(--fire-brick);
+  --sidebar-text-color: var(rgb(0, 0, 0));
+  --slides-container-bg-color: var(--eerie-black);
+  --slides-text-default-color: var(--platinum);
+
+}
+  
+body {
+  background-color: black;
+  font-size: 100%;
+}
+
+/* CSS HSL */
+/*
+--licorice: hsla(343, 100%, 3%, 1);
+--dark-purple: hsla(326, 72%, 11%, 1);
+--rosewood: hsla(353, 75%, 24%, 1);
+--red-violet: hsla(326, 81%, 40%, 1);
+--magenta: hsla(330, 96%, 54%, 1);
+*/
+
+* {
+  margin: 0%;
+}
+
+html
+{
+  /* overflow: hidden; */
+}
+
+
+body {
+  /* background-color: #3b004e; */
+  text-align: justify;
+  
+  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:"wdth" 99.9;
+} 
+
+
+
+.slide_inner_content {
+  width: 90%;
+  height: 90%;
+  overflow-y: auto;
+
+  /* This is so that the content div is centered */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+
+  
+} 
+
+.slide_inner_content p {
+  width: 100%;
+}
+
+.slide_inner_content_with_unity_iframe {
+  display: block;
+}
+
+
+.all_container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+
+  height: 100vh;
+
+}
+
+.sidebar {
+  /*background-color: brown;*/
+  /* display: block; */
+  width: 25%;
+
+  background-color: var(--sidebar-bg-color);
+  color: var(rgb(0, 0, 0));
+
+  /* This is so that the content div is centered */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
+  overflow-y: scroll;
+  flex-direction: column;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+.image_credit {
+  text-align: right;
+  font-size: 0.875em;
+  color:var(--eerie-black);
+}
+
+.sidebar * {
+  width: 90%;
+}
+
+.sidebar h1 {
+  background-color: black;
+  color: white;
+  width: 90%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+.sidebar_footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+/* .sidebar_inner_content {
+  width: 90%;
+  height: 90%;
+  overflow-y: auto;
+}  */
+
+.container {
+  position: relative;
+  /* background-color: black; */
+  /* display: flex; */
+  width: 75%;
+  /* color: rgb(255, 255, 255); */
+
+
+  /* background-color: var(--slides-container-bg-color); */
+  background-image: url(assets/img/bgd1.png);
+  background-repeat: repeat;
+  color: var(--slides-text-default-color);
+  
+
+  overflow: hidden;
+}
+
+/* .container { */
+  /* -ms-overflow-style: none;   */
+  /* Internet Explorer 10+ */
+  /* scrollbar-width: none;   */
+  /* Firefox */
+/* } */
+/* .container::-webkit-scrollbar {  */
+  /* display: none;   */
+  /* Safari and Chrome */
+/* } */
+
+
+
+.slide {
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  border-radius: 25px;
+
+  text-justify: distribute;
+
+  /*transition: all 0.5s ease;*/
+  transition: all 0.5s cubic-bezier(.17,.67,1,1.46);
+  transition: transform 0.5s ease;
+
+  /* overflow-y: auto; */
+
+  /* This is so that the content div is centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide_center {
+  
+  background-color: rgb(0, 0, 71);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 5;
+
+  /*transition: all 0.7s ease-out;
+  transition: all 0.5s ease;*/
+  transition: all 0.5s cubic-bezier(.17,.67,1,1.46);
+  transition: transform 0.5s ease;
+
+}
+/**/
+.slide_left {
+  opacity: 0.7;
+
+  background-color: rgb(0, 71, 20);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%) scaleY(90%);
+
+}
+
+.slide_right {
+  opacity: 0.7;
+
+  background-color: rgb(50, 71, 0);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%) scaleY(90%);
+
+
+}
+
+/*
+.slide_hidden {
+  opacity: 0;
+  
+  display: none;
+  
+  transition: all 0.5s ease;
+}*/
+
+
+.slide_hidden {
+  opacity: 0;
+
+  background-color: rgb(50, 71, 0);
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scaleY(1%); 
+
+  transition: all 0.5s cubic-bezier(0,1.65,1,1.46);
+}
+
+.language_icon {
+  cursor: pointer;
+
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  width: 6vh;
+  height: auto;
+}
+
+.arrow_left {
+  cursor: pointer;
+  position: absolute;
+
+
+  bottom: 6%;
+
+  
+  width: 6vh;
+  height: auto;
+
+  left: 40%;
+  transform: translateX(-50%);
+  
+  z-index: 1000;
+}
+
+.arrow_right {
+  cursor: pointer;
+  position: absolute;
+  
+  
+  width: 6vh;
+  height: auto;
+  
+  bottom: 6%;
+
+  right: 40%;
+  transform: translateX(50%);
+  
+  z-index: 1000;
+}
+
+
+.slide_illustration {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 15px;
+
+}
+
+.unity_iframe {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+
+  /* height: 100%;
+  width: 100%; */
+
+  /* width: min-content;
+  height: min-content; */
+
+  /* height: 200em; */
+  width: 100%;
+
+  flex: 1;
+
+
+}
+
+
+canvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.me_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 15px;
+
+  width: 90%;
+
+}
+
+.embedded_pdf {
+
+  width:80%; 
+  height:80%;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 15px;
+
+
+}
+
+
+
+@media (max-width: 600px) {
+  .all_container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh; 
+  }
+}
+
+
+
+/*
+@media (max-width: 600px) {
+
+  .all_container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100vw;
+    height: 30vh;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 70vh;
+  }
+}
+*/

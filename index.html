@@ -1,59 +1,569 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <title>Joel Colaso</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="assets/css/main_style.css">
+    <meta charset="utf-8">
+    <title>Joel's Projects</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,99.9,100..900;1,99.9,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self';" /> -->
+
+    <meta name="robots" content="noindex, noarchive, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  
+
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        speed: 600
-      });
-    </script>
-
-    <header>
-      <h1>Welcome to my website</h1>
-      <p>I created this website to show some of the projects I've worked on.</p>
-    </header>
-
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Project 1</div>
-        <div class="swiper-slide">Project 2</div>
-        <div class="swiper-slide">Project 3</div>
-        <!-- Add more -->
-      </div>
     
-      <!-- Navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div class = "all_container">
+      
+      <div class = "sidebar">
+        <!-- <div class = "sidebar_inner_content"> -->
+          <br>
+          <h1 data-i18n="sidebar_greeting">Welcome to Joel's Projects</h1>
+          <br>
+          <p data-i18n="sidebar_introduction">Hi, I'm Joel, I'm very passionate about <b>computer science, electronics and engineering</b> and I decided to build this website to display some projects that I've worked on throughout my life.</p>
+          
+          <br>
+          <p data-i18n="sidebar_under_construction">Please keep in mind that this website is <b>under construction</b>; I have yet to add some of my old projects and continue to improve your experience :)</p>
+          
+          <br>
+          <img class="me_image" src="assets/img/me.jpeg" alt="Picture of me">
+          <p data-i18n="sidebar_image_credit" class="image_credit">Photo of me by Gilles Lecam</p>
+          <br>
+          
+          <p data-i18n="sidebar_thanks">
+            I'd like to thank my family, friends and partner for having supported throughout my journey, as well as my professors, mentors and the people who've written the books, guides and tutorials that I have used as learning materials.
+          </p>
+          <br>
+          <br>
+          <p class="sidebar_footer">2025 Joel Colaso</p>
+        <!-- </div> -->
+      </div>
+      
+      
+      <div class = "container">
+        
+        
+        <!-- <div style="background-color: rgb(79, 0, 153);" class="slide slide_center"> -->
+        <div style="background-color: #a14da0ff" class="slide slide_center">
+          <div class = "slide_inner_content slide_inner_content_with_unity_iframe">
+
+            <h2>Learning the Unity game engine (C#, HLSL)</h2>
+            <br>
+            <br>
+            <p>I am currently following some of <a target="_blank" rel="noopener noreferrer" href="https://catlikecoding.com/unity/tutorials/">catlikecoding's Unity game engine tutorials</a>.</p>
+            <br>
+            <p>Through that I am learning about using the GPU with shaders and the HLSL language, measuring performance, 3D graphics and rendering.</p>
+            <br>
+            <p>The following program generates instances of cubes and animates them in 3D to represent a few vector functions. The cubes' material is calculated by a shader mapping their XYZ coordinates to the 3D values</p>
+            <br>
+            <p>To reduce lag in this website, you can stop Unity's execution by clicking the "Unload" button. Reloading the website will restore the Unity instance.</p>
+            <br>
+            
+            
+            
+            <iframe class="unity_iframe" src="buildwebdemo1/index.html" width="820" height="550" style="border:none;"></iframe>
+            <p>This program is the result from the tutorials up to <a target="_blank" rel="noopener noreferrer" href="https://catlikecoding.com/unity/tutorials/basics/measuring-performance/">this point</a> though I learned to change the background skybox, build for WebGL (to make it web-compatible) and embed the Unity window in my website from other sources.</p>
+            <br>
+            <br>
+            <br>
+
+          </div>
+
+        </div>
+
+        <!-- <div style="background-color: rgb(124, 0, 74);" class="slide slide_right"> -->
+        <div style="background-color: #4b88a2ff;" class="slide slide_right">
+          <div class = "slide_inner_content">
+
+            <h2>ProcessingJS Projects</h2>
+            <br>
+            <br>
+            <p>
+              Here are one of my first coding projects that I made in the year 2017.
+              <br>
+              <br>
+              I wrote them after learning javascript and ProcessingJS (which is a library that adapts Java's "Processing" to javascript).
+              <br>
+              <br>
+              Since it is Javascript-based, I was able to include them in this website easily.
+              <br>
+              <br>
+              The controls for the following one are only functional with a keyboard and thus not mobile compatible.
+            </p>
+            
+            <br>
+            <script src="game1.js" type="application/processing"></script>
+            <canvas tabindex="0"></canvas>
+            <br>
+
+            <br>
+            <p>More recently I went back to this environment and coded the following simple particle fire artistic representation.</p>
+            <br>
+
+            <script type="application/processing">
+              
+              const element = document.getElementsByClassName("slide_center")[0];
+              const rect = element.getBoundingClientRect();
+          
+              const width = rect.width;
+              const height = rect.height;
+
+              const offsetX = rect.width / 2;
+              const offsetY = rect.height / 2;
+
+              void setup() {
+    size(400, 400);
+};
+  
+
+noStroke();
+
+var windowX = 0;
+var windowY = 0;
+var windowW = 400;
+var windowH = 400;
+
+
+var Particle = function(x, y, w, h, vx, vy, col) {
+  this.x = x;
+  this.y = y;
+  this.w = w;
+  this.h = h;
+  
+  this.vx = vx;
+  this.vy = vy;
+  
+  this.active = 1;
+  
+  this.lifetime = 0;
+  
+  this.r = col[0];
+  this.g = col[1];
+  this.b = col[2];
+};
+
+Particle.prototype.show = function() {
+    fill(this.r, this.g, this.b);
+    ellipse(this.x, this.y, this.w, this.h);
+};
+
+Particle.prototype.update = function() {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.w -= 0.1;
+    this.h -= 0.1;
+    
+    if(this.x < windowX) {
+        this.vx *= -1;
+    }
+    if(this.y < windowY) {
+        this.vy *= -1;
+    }
+    if(this.x > windowX + windowW) {
+        this.vx *= -1;
+    }
+    if(this.y > windowY + windowH) {
+        this.vy *= -1;
+    }
+};
+
+
+var ParticleSource = function(x, y, col, initialParticleSize, initialSpeedLimit) {
+    this.x = x;
+    this.y = y;
+    
+    this.particles = [];
+    
+    this.r = col[0];
+    this.g = col[1];
+    this.b = col[2];
+    
+    this.activated = true;
+    
+    this.initialParticleSize = initialParticleSize;
+    
+    this.initialSpeedLimit = initialSpeedLimit;
+};
+
+ParticleSource.prototype.show = function() {
+    for (var i = 0; i < this.particles.length; i++) {
+        this.particles[i].show();
+    }
+};
+
+ParticleSource.prototype.update = function(frameNum) {
+    
+    for (var i = 0; i < this.particles.length; i++) {
+        this.particles[i].update();
+    }
+    
+    if (this.activated === true) {
+        if (frameNum % 1 === 0) {
+            var random_vx = random(-this.initialSpeedLimit, this.initialSpeedLimit);
+            var random_vy = random(-this.initialSpeedLimit, this.initialSpeedLimit);
+        
+            var newParticle = new Particle(this.x, this.y, this.initialParticleSize/4, this.initialParticleSize/4, random_vx, random_vy-2, [this.r, this.g, this.b]);
+            
+            this.particles[this.particles.length] = newParticle;
+            
+            
+        }
+    }
+    
+    for (var i = 0; i < this.particles.length; i++) {
+        var p = this.particles[i];
+
+        p.lifetime+=1;
+        
+        var r = random(0, 1);
+        
+        if (r < p.lifetime/1000) {
+            p.active = 0;
+            
+            var temp = this.particles[this.particles.length-1];
+            this.particles[this.particles.length-1] = this.particles[i];
+            this.particles[i] = temp;
+            
+            this.particles.pop(this.particles.length-1);
+        }
+    }
+};
+
+
+
+
+
+var frameNum = 0;
+//frameRate(1);
+
+
+
+
+var particleGenerator1 = new ParticleSource(mouseX + offsetX, mouseY + offsetY, [255, 0, 0], 40, 2);
+var particleGenerator2 = new ParticleSource(mouseX + offsetX, mouseY + offsetY, [255, 127, 0], 30, 2);
+var particleGenerator3 = new ParticleSource(mouseX + offsetX, mouseY + offsetY, [255, 255, 0], 20, 2);
+
+//alert(offsetX);
+
+
+draw = function() {
+    background(229, 254, 255);
+    background(0, 0, 0);
+
+    
+    frameNum++;
+
+    particleGenerator1.update(frameNum);
+    particleGenerator1.show();
+    particleGenerator2.update(frameNum);
+    particleGenerator2.show();
+    particleGenerator3.update(frameNum);
+    particleGenerator3.show();
+    
+    particleGenerator1.x = mouseX + offsetX;
+    particleGenerator1.y = mouseY + offsetY;
+    particleGenerator2.x = mouseX + offsetX;
+    particleGenerator2.y = mouseY + offsetY;
+    particleGenerator3.x = mouseX + offsetX;
+    particleGenerator3.y = mouseY + offsetY;
+
+
+
+    
+};
+
+
+            </script>
+
+            
+                      
+            <!-- <script src="particles1.js" type="application/processing"></script> -->
+            <!-- <script type="application/processing"></script> -->
+            <canvas tabindex="0"></canvas>
+
+            <br>
+            <br>
+            <br>
+            
+
+
+          </div>
+        </div>
+        
+        <div style="background-color: rgb(141, 148, 0);" class="slide slide_hidden">
+          <div class = "slide_inner_content">
+            <h2>Ingenuity Inspired Drone</h2>
+            <br>
+            <br>
+            
+            <p>Ingenuity is a small helicopter landed by NASA on Mars in 2020 that has two coaxial helices and took images of Mars during 72 missions blowing the expected 5 out of the water.</p>
+            <br>
+            <p>During my second year at E.N.S.E.A. I worked alongside 3 of my peers, Kevin Dugard, Elio Flandin, and Pénélope Henner to design and build a drone inspired but made to fly on on Earth's atmosphere</p>
+            <br>
+            <p>Briefly, our drone used a Raspberry Pi Zero card to receive instructions by WiFi (SSH) from the GUI in a computer. Then it passed the instructions to a STM32 microcontroller which then decoded it and then controlled two motors and used a distance sensor to control the height of the helicopter.</p>
+            <br>
+            <img class="slide_illustration" src="assets/img/diagram1.png" alt="">
+            <br>
+            <p>My main responsability was writing the code for controlling the helicopter with the STM32 microcontroller</p>
+            <br>
+            <p>I designed the instruction format for communication between the Raspberry PI and the STM32 microcontrollers and developped the UART reception and decoding of the instructions.</p>
+            <br>
+            <p>I also developped the firmware to control the motors, which employed Pulse Width Modulation (PWM) to determine the power of the motors.</p>
+            <br>
+            <img class="slide_illustration" src="assets/img/pwm1.png" alt="">
+            <br>
+            <p>Here is an image of the final appearance of our chassis. The bases employ laser cutting and the other parts were 3D printed and painted.</p>
+            <br>
+            <img class="slide_illustration" src="assets/img/final1.jpg" alt="">
+            <br>
+
+
+
+
+
+
+          </div>
+        </div>
+
+        <div style="background-color: rgb(94, 0, 22);" class="slide slide_hidden">
+          <div class = "slide_inner_content">
+            <h2>Automation of .</h2>
+            <br>
+            <br>
+            <p>
+              During . 
+              <br>
+              I  .
+            </p> 
+          </div>
+        </div>
+
+
+        <div style="background-color: rgb(94, 24, 0);" class="slide slide_hidden">
+          <div class = "slide_inner_content">
+            <h2>Big Data Analysis and Processing with Spark.</h2>
+            <br>
+            <br>
+            <p>
+              During the second semester of my second year at ENSEA I had the opportunity to enroll in the Big Data and AI option. 
+              <br>
+              I was able to study the differences between using Resilient Distributed Datasets (RDDs) and DataFrames, as well as understand the advantages of Spark's parallellization for resiliency against electronic failures and performance.
+            </p> 
+          </div>
+        </div>
+
+        <div style="background-color: rgb(0, 93, 94);" class="slide slide_hidden">
+          <div class = "slide_inner_content">
+            <h2>Machine learning with Pytorch</h2>
+            <br>
+            <br>
+            <!-- <p>I have also conducted experiments on my own to better understand the role of activation functions in introducing non-linearity to the model.</p>  -->
+
+            <!-- <div id="adobe-dc-view" style="height: 360px; width: 100%;"></div>
+            <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+            <script type="text/javascript">
+              document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                var adobeDCView = new AdobeDC.View({clientId: "43f0f3bf8c4b49bf819d6d35c326d451", divId: "adobe-dc-view"});
+                adobeDCView.previewFile({
+                  content:{location: {url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+                  metaData:{fileName: "Bodea Brochure.pdf"}
+                }, {embedMode: "SIZED_CONTAINER"});
+              });
+            </script> -->
+
+
+
+          </div>
+        </div>
+
+
+        <div style="background-color: rgb(0, 94, 44);" class="slide slide_left">
+          <div class = "slide_inner_content">
+            <h2>THIS IS SLIDE 2</h2>
+            <br>
+            <!-- <div style="width: 100%; height: 480px;" class="smallpdf-widget" data-pdf-url="https://edinburghuniversitypress.com/media/resources/9781474402095_Three_Short_Novels_Introduction.pdf"></div><script src="https://smallpdf.com/api/embed-widget.js"></script> -->
+            
+            <!-- <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=http://example.com/the.pdf" width="500" height="375"> -->
+              <!-- <embed src="https://docs.google.com/document/d/1yCN21Qwo8UKO4dKQUpnUClkL8VPnht1-MbKvmUMcChI/edit?usp=sharing" width="100%" height="100%"> -->
+              <!-- <embed src="https://docs.google.com/document/d/1cfD-1qFU8Zj_s7rVTqnnrsqoQm2VMnzlM6cOJflufvw/edit?usp=sharing" width="100%" height="100%"> -->
+              <!-- <embed src="https://docs.google.com/document/d/1TjDC0wU9M1PoHfKyDhzv3dTjT9ZLuwKpBh2bmxABG3o/edit?usp=sharing" width="100%" height="100%"> -->
+              <iframe class="embedded_pdf" src="https://docs.google.com/gview?url=https://edinburghuniversitypress.com/media/resources/9781474402095_Three_Short_Novels_Introduction.pdf&embedded=true" frameborder="0"></iframe>
+
+            
+            <br>
+            <p></p> 
+          </div>
+        </div>
+
+
+
+        <img onclick="prevSlide()" class="arrow_left" src="assets/img/arrow_left.png" alt="previous project">
+        <img onclick="nextSlide()" class="arrow_right" src="assets/img/arrow_right.png" alt="next project">
+      </div>
+  
     </div>
+
+    <img onclick="switchLanguage()" class="language_icon" src="assets/img/fr_flag.png" alt="france flag">
+      
+    <script>
+
+      async function loadLanguage(lang) {
+        const response = await fetch(`./lang/${lang}.json`);
+        const translations = await response.json();
+  
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          // el.textContent = translations[key] || key;
+          el.innerHTML = translations[key] || key;
+        });
+      }
+
+      // Set initial language
+      var currentLanguage = "en";
+      loadLanguage(currentLanguage);
+
+      function switchLanguage() {
+
+        const x = document.getElementsByClassName("language_icon");
+        x[0].src = "assets/img/" + currentLanguage + "_flag.png";
+
+        if (currentLanguage === "en") {
+          currentLanguage = "fr";
+        } else {
+          currentLanguage = "en";
+        }
+
+        loadLanguage(currentLanguage);
+      }
+
+      function prevSlide() {
+
+        for (let i = 0; i < nSlides; i++) {
+          slidesSlots[i] += 1;
+          if (slidesSlots[i] === nSlides) {
+            slidesSlots[i] = 0;
+          }
+        }
+
+        updateSlideClasses();
+      }
+
+      function nextSlide() {
+
+        for (let i = 0; i < nSlides; i++) {
+          slidesSlots[i] -= 1;
+          if (slidesSlots[i] === -1) {
+            slidesSlots[i] = nSlides-1;
+          }
+        }
+
+        updateSlideClasses();
+
+      }
+
+      function getAllSlides() {
+        return document.getElementsByClassName("slide");
+      };
+
+      var allSlides = getAllSlides();
+
+      // alert("the slides are" + allSlides.length)
+
+      var nSlides = allSlides.length;
+
+      var slidesSlots = [];
+      for (let i = 0; i < nSlides; i++) {
+        slidesSlots[i] = i;
+      }
+
+      function updateSlideClasses() {
+        var idOfCenterSlide = slidesSlots[0];
+        var idOfLeftSlide = slidesSlots[nSlides-1];
+        var idOfRightSlide = slidesSlots[1];
+
+        /* This approach could be improved because we're removing all other classes which we may not want */
+        /* https://stackoverflow.com/questions/195951/how-can-i-change-an-elements-class-with-javascript */
+    
+        for (let i = 0; i < nSlides; i++) {
+          if (i === idOfCenterSlide) {
+            allSlides[i].className = "slide_center slide";
+          } else if (i === idOfLeftSlide) {
+            allSlides[i].className = "slide_left slide";
+          } else if (i === idOfRightSlide) {
+            allSlides[i].className = "slide_right slide";
+          } else {
+            allSlides[i].className = "slide_hidden slide";
+          }
+        }
+        
+      }
+
+
+
+
+      document.addEventListener('click', (event) => {
+        const tagName = event.target.tagName;
+        //alert(tagName); // Will log 'CANVAS', 'H1', 'P', etc.
+      });
+
+      document.addEventListener('focusin', (event) => {
+        println('Focused element tag:', event.target.tagName);
+      });
+
+      var activeCanvas = 0;
+
+
+      document.addEventListener('keydown', function(event) {
+        if(activeCanvas === 0) {
+          if(event.keyCode == 37) {
+            prevSlide();
+          }
+          else if(event.keyCode == 39) {
+            nextSlide();
+          }
+        }
+      });
+
+      
+      function getAllCanvas() {
+        return document.getElementsByTagName("canvas");
+      };
+
+      var activeCanvas = 0;
+
+
+
+      document.querySelectorAll('canvas').forEach(canvas => {
+        canvas.addEventListener('focus', () => {
+          console.log('Canvas focused:' + canvas.id);
+          activeCanvas += 1;
+        });
+
+        canvas.addEventListener('blur', () => {
+          console.log('Canvas blurred:' + canvas.id);
+          activeCanvas -= 1;
+        });
+      });
+
+
+
+
+    </script>
     
 
 
-    <section class = "projects_container">
-      <div class = "project">
-        <h3>Project 1 Title</h3>
-        <p>Project 1 text</p>
-      </div>
 
-    </section>
-    
-    <p>This website is still <strong>under construction</strong>. Thank you for visiting!</p>
-    
-    <footer>
-      <p> © 2025 Joel Colaso | <a href="https://github.com/joel-colaso">GitHub</a></p>
-    </footer>
-    
+
   </body>
 </html>
