@@ -45,8 +45,8 @@
             I'd like to thank my family, friends and partner for having supported throughout my journey, as well as my professors, mentors and the people who've written the books, guides and tutorials that I have used as learning materials.
           </p>
           <br>
-          <br>
           <p class="sidebar_footer">2025 Joel Colaso</p>
+          <br>
         <!-- </div> -->
       </div>
       
@@ -69,10 +69,22 @@
             <br>
             <p>To reduce lag in this website, you can stop Unity's execution by clicking the "Unload" button. Reloading the website will restore the Unity instance.</p>
             <br>
+
+            <button onclick="displayUnityIframe()">CLICK ME</button>
             
             
-            
-            <iframe class="unity_iframe" src="buildwebdemo1/index.html" width="820" height="550" style="border:none;"></iframe>
+            <iframe class="unity_iframe" src="" width="820" height="550" style="border:none;"></iframe>
+            <!-- <iframe class="unity_iframe" src="buildwebdemo1/index.html" width="820" height="550" style="border:none;"></iframe> -->
+
+            <script>
+              async function displayUnityIframe() {
+                //alert("alert");
+                const x = document.getElementsByClassName("unity_iframe");
+                x[0].src = "buildwebdemo1/index.html";
+              }
+            </script>
+
+
             <p>This program is the result from the tutorials up to <a target="_blank" rel="noopener noreferrer" href="https://catlikecoding.com/unity/tutorials/basics/measuring-performance/">this point</a> though I learned to change the background skybox, build for WebGL (to make it web-compatible) and embed the Unity window in my website from other sources.</p>
             <br>
             <br>
