@@ -42,7 +42,7 @@ body {
 
 html
 {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 
@@ -62,7 +62,15 @@ body {
   font-variation-settings:"wdth" 99.9;
 } 
 
+.sidebar * {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 
+.sidebar h1 {
+  margin-top: 0.60em;
+  margin-bottom: 0.5em;
+}
 
 .slide_inner_content {
   width: 90%;
@@ -82,7 +90,7 @@ body {
   width: 100%;
 }
 
-.slide_inner_content_with_unity_iframe {
+.slide_inner_content_with_block_display {
   display: block;
 }
 
@@ -114,14 +122,13 @@ body {
   
 }
 
-h1 {
-  text-align: center;
-}
 
 .image_credit {
   text-align: right;
   font-size: 0.875em;
   color:var(--eerie-black);
+
+  margin-top: 0%;
 }
 
 .sidebar * {
@@ -129,6 +136,8 @@ h1 {
 }
 
 .sidebar h1 {
+  text-align: center;
+
   background-color: black;
   color: white;
   width: 90%;
@@ -144,7 +153,28 @@ h1 {
   color: white;
   width: 100%;
   text-align: center;
+
+  margin-bottom: 1.5em;
 }
+
+.slide * {
+  /* margin-top: 0.5em;
+  margin-bottom: 0.5em; */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.slide h2 {
+  text-align: center;
+  margin-top: 0em;
+}
+
+.slide_inner_content_with_block_display h2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* .sidebar_inner_content {
   width: 90%;
@@ -194,12 +224,15 @@ h1 {
   transition: all 0.5s cubic-bezier(.17,.67,1,1.46);
   transition: transform 0.5s ease;
 
-  /* overflow-y: auto; */
+  /* add unwanted scrollbars */
+  /* overflow-y: scroll; */
 
   /* This is so that the content div is centered */
   display: flex;
   justify-content: center;
   align-items: center;
+
+
 }
 
 .slide_center {
@@ -309,6 +342,57 @@ h1 {
 }
 
 
+.load_unity_button {
+  background-color: white; /* Green */
+  border: solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 15px;
+
+  transition: all 0.0s ease-in-out;
+  background-color: var(--platinum);
+  color: var(--)var(--eerie-black);
+
+  cursor: pointer;
+
+}
+
+.load_unity_button:hover {
+  background-color: var(--eerie-black);
+  color: var(--platinum);
+  border: solid var(--platinum);
+
+  transition: all 0.15s ease-in-out;
+  
+}
+
+b {
+  font-weight: 800;
+}
+
+/* .load_unity_button:active {
+  background-color: black;
+  color: white;
+  
+}
+
+.load_unity_button:active:after {
+  transition: 0s
+}
+ */
+
+
+
 .slide_illustration {
   width: 90%;
   display: block;
@@ -360,7 +444,7 @@ canvas {
 
   width:80%; 
   height:80%;
-  /* display: block; */
+  display: block;
   margin-left: auto;
   margin-right: auto;
 

@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,99.9,100..900;1,99.9,100..900&display=swap" rel="stylesheet">
@@ -28,25 +27,25 @@
       
       <div class = "sidebar">
         <!-- <div class = "sidebar_inner_content"> -->
-          <br>
+          <!-- <br> -->
           <h1 data-i18n="sidebar_greeting">Welcome to Joel's Projects</h1>
-          <br>
+          <!-- <br> -->
           <p data-i18n="sidebar_introduction">Hi, I'm Joel, I'm very passionate about <b>computer science, electronics and engineering</b> and I decided to build this website to display some projects that I've worked on throughout my life.</p>
           
-          <br>
+          <!-- <br> -->
           <p data-i18n="sidebar_under_construction">Please keep in mind that this website is <b>under construction</b>; I have yet to add some of my old projects and continue to improve your experience :)</p>
           
-          <br>
+          <!-- <br> -->
           <img class="me_image" src="assets/img/me.jpeg" alt="Picture of me">
           <p data-i18n="sidebar_image_credit" class="image_credit">Photo of me by Gilles Lecam</p>
-          <br>
+          <!-- <br> -->
           
           <p data-i18n="sidebar_thanks">
             I'd like to thank my family, friends and partner for having supported throughout my journey, as well as my professors, mentors and the people who've written the books, guides and tutorials that I have used as learning materials.
           </p>
-          <br>
+          <!-- <br> -->
           <p class="sidebar_footer">2025 Joel Colaso</p>
-          <br>
+          <!-- <br> -->
         <!-- </div> -->
       </div>
       
@@ -56,21 +55,21 @@
         
         <!-- <div style="background-color: rgb(79, 0, 153);" class="slide slide_center"> -->
         <div style="background-color: #a14da0ff" class="slide slide_center">
-          <div class = "slide_inner_content slide_inner_content_with_unity_iframe">
+          <div class = "slide_inner_content slide_inner_content_with_block_display">
 
             <h2>Learning the Unity game engine (C#, HLSL)</h2>
-            <br>
-            <br>
+            <!-- <br> -->
+            <!-- <br> -->
             <p>I am currently following some of <a target="_blank" rel="noopener noreferrer" href="https://catlikecoding.com/unity/tutorials/">catlikecoding's Unity game engine tutorials</a>.</p>
-            <br>
+            <!-- <br> -->
             <p>Through that I am learning about using the GPU with shaders and the HLSL language, measuring performance, 3D graphics and rendering.</p>
-            <br>
+            <!-- <br> -->
             <p>The following program generates instances of cubes and animates them in 3D to represent a few vector functions. The cubes' material is calculated by a shader mapping their XYZ coordinates to the 3D values</p>
-            <br>
+            <!-- <br> -->
             <p>To reduce lag in this website, you can stop Unity's execution by clicking the "Unload" button. Reloading the website will restore the Unity instance.</p>
-            <br>
+            <!-- <br> -->
 
-            <button onclick="displayUnityIframe()">CLICK ME</button>
+            <button class="load_unity_button" onclick="displayUnityIframe()">LOAD UNITY PROGRAM</button>
             
             
             <iframe class="unity_iframe" src="" width="820" height="550" style="border:none;"></iframe>
@@ -86,9 +85,9 @@
 
 
             <p>This program is the result from the tutorials up to <a target="_blank" rel="noopener noreferrer" href="https://catlikecoding.com/unity/tutorials/basics/measuring-performance/">this point</a> though I learned to change the background skybox, build for WebGL (to make it web-compatible) and embed the Unity window in my website from other sources.</p>
-            <br>
-            <br>
-            <br>
+            <!-- <br> -->
+            <!-- <br> -->
+            <!-- <br> -->
 
           </div>
 
@@ -99,29 +98,29 @@
           <div class = "slide_inner_content">
 
             <h2>ProcessingJS Projects</h2>
-            <br>
-            <br>
+            <!-- <br> -->
+            <!-- <br> -->
             <p>
               Here are one of my first coding projects that I made in the year 2017.
-              <br>
-              <br>
+              <!-- <br> -->
+              <!-- <br> -->
               I wrote them after learning javascript and ProcessingJS (which is a library that adapts Java's "Processing" to javascript).
-              <br>
-              <br>
+              <!-- <br> -->
+              <!-- <br> -->
               Since it is Javascript-based, I was able to include them in this website easily.
-              <br>
-              <br>
+              <!-- <br> -->
+              <!-- <br> -->
               The controls for the following one are only functional with a keyboard and thus not mobile compatible.
             </p>
             
-            <br>
+            <!-- <br> -->
             <script src="game1.js" type="application/processing"></script>
             <canvas tabindex="0"></canvas>
-            <br>
+            <!-- <br> -->
 
-            <br>
+            <!-- <br> -->
             <p>More recently I went back to this environment and coded the following simple particle fire artistic representation.</p>
-            <br>
+            <!-- <br> -->
 
             <script type="application/processing">
               
@@ -304,9 +303,9 @@ draw = function() {
             <!-- <script type="application/processing"></script> -->
             <canvas tabindex="0"></canvas>
 
+            <!-- <br>
             <br>
-            <br>
-            <br>
+            <br> -->
             
 
 
@@ -316,33 +315,47 @@ draw = function() {
         <div style="background-color: rgb(141, 148, 0);" class="slide slide_hidden">
           <div class = "slide_inner_content">
             <h2>Ingenuity Inspired Drone</h2>
-            <br>
-            <br>
+            <!-- <br>
+            <br> -->
             
             <p>Ingenuity is a small helicopter landed by NASA on Mars in 2020 that has two coaxial helices and took images of Mars during 72 missions blowing the expected 5 out of the water.</p>
-            <br>
+            <!-- <br> -->
             <p>During my second year at E.N.S.E.A. I worked alongside 3 of my peers, Kevin Dugard, Elio Flandin, and Pénélope Henner to design and build a drone inspired but made to fly on on Earth's atmosphere</p>
-            <br>
+            <!-- <br> -->
             <p>Briefly, our drone used a Raspberry Pi Zero card to receive instructions by WiFi (SSH) from the GUI in a computer. Then it passed the instructions to a STM32 microcontroller which then decoded it and then controlled two motors and used a distance sensor to control the height of the helicopter.</p>
-            <br>
+            <!-- <br> -->
             <img class="slide_illustration" src="assets/img/diagram1.png" alt="">
-            <br>
+            <!-- <br> -->
             <p>My main responsability was writing the code for controlling the helicopter with the STM32 microcontroller</p>
-            <br>
+            <!-- <br> -->
             <p>I designed the instruction format for communication between the Raspberry PI and the STM32 microcontrollers and developped the UART reception and decoding of the instructions.</p>
-            <br>
+            <!-- <br> -->
             <p>I also developped the firmware to control the motors, which employed Pulse Width Modulation (PWM) to determine the power of the motors.</p>
-            <br>
+            <!-- <br> -->
             <img class="slide_illustration" src="assets/img/pwm1.png" alt="">
-            <br>
+            <!-- <br> -->
             <p>Here is an image of the final appearance of our chassis. The bases employ laser cutting and the other parts were 3D printed and painted.</p>
-            <br>
+            <!-- <br> -->
             <img class="slide_illustration" src="assets/img/final1.jpg" alt="">
-            <br>
+            <!-- <br> -->
+            <p>One of the functionalities I implemented was the ability to react to height changes to control the drone's vertical position.</p>
+            <p>Here is a video of the pulse signal sent to the motor adapting to the height detected by the TOF sensor. Here, the selected control mode is "constant" (it adds or substracts a constant from the motor's command depending on whether detected height is over a threshold -the instruction height-) but I also implemented "linear" and "linear-differential" modes.</p>
+            
+            <!-- add autoplay if wanted -->
+            <video muted controls style="border: 4px solid rgb(0, 0, 0); border-radius: 10px;">
+              <source src="assets/video/tof_vid1.mp4" type="video/mp4">
+              <!-- <source src="assets/video/tof_vid1.ogg" type="video/ogg"> -->
+              A video was supposed to be here but something went wrong :/
+            </video>
+            
+            <p>The following video is from one of the remote flight tests we performed. As a security measure, a member of the group (Kevin) used rods to limit movement if necessary while I controlled the drone's height using our graphic interface.</p>
 
+            <video muted controls style="border: 4px solid rgb(0, 0, 0); border-radius: 10px;">
+              <source src="assets/video/test_flight1.mp4" type="video/mp4">
+              A video was supposed to be here but something went wrong :/
+            </video>
 
-
-
+            <p>I used the <a href="https://github.com/ORB-HD/deface/">deface</a> Python tool to blur my colleagues' faces to respect their privacy.</p>
 
 
           </div>
@@ -365,28 +378,46 @@ draw = function() {
         <div style="background-color: rgb(94, 24, 0);" class="slide slide_hidden">
           <div class = "slide_inner_content">
             <h2>Big Data Analysis and Processing with Spark.</h2>
-            <br>
-            <br>
+            <!-- <br>
+            <br> -->
             <p>
               During the second semester of my second year at ENSEA I had the opportunity to enroll in the Big Data and AI option. 
               <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              I was able to study the differences between using Resilient Distributed Datasets (RDDs) and DataFrames, as well as understand the advantages of Spark's parallellization for resiliency against electronic failures and performance.
+            </p> 
+            <p>
+              During the second semester of my second year at ENSEA I had the opportunity to enroll in the Big Data and AI option. 
+            </p> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
               I was able to study the differences between using Resilient Distributed Datasets (RDDs) and DataFrames, as well as understand the advantages of Spark's parallellization for resiliency against electronic failures and performance.
             </p> 
           </div>
         </div>
 
         <div style="background-color: rgb(0, 93, 94);" class="slide slide_hidden">
-          <div class = "slide_inner_content">
+          <div class = "slide_inner_content slide_inner_content_with_block_display">
             <h2>Machine learning with Pytorch</h2>
-            <br>
-            <br>
+            <!-- <br>
+            <br> -->
             <p>Here is a Lab Report that I worked on following a practical school project on using neural networks for image compression and denoising.</p>
-            <br>
+            <!-- <br> -->
             <p>It involved writing an autoencoder structure that's composed of an <b>encoder</b>, which connects the input layer to a more compact <b>latent space</b> where the image is compressed, and a <b>decoder</b>, that attempts to reconstruct the original image from the latent representation. First, we used a neural network composed only of <b>linear and activation layers</b>, and then we added a <b>convolutional layer</b> and compared the results. Among other conclusions, we confirmed that a convolutional model proves to be more adapted to learning to process 2D images.
             </p>
-            <br>
+            <!-- <br> -->
             <p>This work was done in collaboration with my colleague Danilo Del Río Cisneros.</p>
-            <br>
+            <!-- <br> -->
             <iframe class="embedded_pdf" src="https://docs.google.com/gview?url=https://joel-colaso.github.io/assets/documents/ai_compression_report.pdf&embedded=true" frameborder="0"></iframe>
 
             <!-- <p>I have also conducted experiments on my own to better understand the role of activation functions in introducing non-linearity to the model.</p>  -->
@@ -412,18 +443,18 @@ draw = function() {
         <div style="background-color: rgb(0, 94, 44);" class="slide slide_left">
           <div class = "slide_inner_content">
             <h2>THIS IS SLIDE 2</h2>
-            <br>
+            <!-- <br> -->
 
             
-            <br>
+            <!-- <br> -->
             <p>Hola Nico gracias por visitar</p> 
           </div>
         </div>
 
 
 
-        <img onclick="prevSlide()" class="arrow_left" src="assets/img/arrow_left.png" alt="previous project">
-        <img onclick="nextSlide()" class="arrow_right" src="assets/img/arrow_right.png" alt="next project">
+        <img onclick="nextSlide()" class="arrow_left" src="assets/img/arrow_left.png" alt="previous project">
+        <img onclick="prevSlide()" class="arrow_right" src="assets/img/arrow_right.png" alt="next project">
       </div>
   
     </div>
@@ -541,10 +572,10 @@ draw = function() {
       document.addEventListener('keydown', function(event) {
         if(activeCanvas === 0) {
           if(event.keyCode == 37) {
-            prevSlide();
+            nextSlide();
           }
           else if(event.keyCode == 39) {
-            nextSlide();
+            prevSlide();
           }
         }
       });
