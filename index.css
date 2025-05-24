@@ -175,6 +175,13 @@ body {
   margin-right: auto;
 }
 
+.slide_inner_content_with_block_display img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* .sidebar_inner_content {
   width: 90%;
